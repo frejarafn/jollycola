@@ -20,8 +20,10 @@
   --groen: #99a812;
   --roed: #a82112;
 
+  --header: rgb(191, 38, 56);
+
   /* fonte */
-  --overskrift: 'Brush Script MT', cursive;
+  --overskrift: 'avenir';
   --broedtekst: Helvetica, sans-serif;
 
   /* whitespace */
@@ -61,7 +63,75 @@ figcaption {
 
 /* header */
 header {
-  padding: var(--whitespace) var(--whitespace);
+  background-color: var(--header);
+
+}
+
+
+
+/* burgermenu */
+.dropdown{
+    position: relative;
+    display: inline-block;
+    font-size: 16px;
+    color: #FFF;
+}
+
+.dropbtn {
+  background-color: var(--header);
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+
+.burgeroverskrifter {
+  font-weight: bold;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #004954;
+}
+
+.third-level-menu {
+  display: inline-block;
+  font-size: 13px;
+  padding: 0;
+  z-index: 1;
+  block-size: auto;
+}
+
+#burger {
+  font-size: 20px;
+  text-decoration: none;
 }
 
 /* Smooth scroll */
@@ -75,12 +145,17 @@ html {
 }
 
 /* Navigation and footer */
-nav,
+
+nav {
+  background-color: var(--header);
+
+}
+
 footer {
   background-color: var(--dark);
   padding: 35px 0;
   text-align: center;
-  margin-bottom: 20px;
+
 }
 
 nav ul,
@@ -179,10 +254,7 @@ Research:
   main {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px; /* ny funktion! */
-    /* gap er ikke implementeret i alle browsere
-      fx virker det ikke i atoms preview ...
-     */
+
   }
 
   /* Forklaring:
