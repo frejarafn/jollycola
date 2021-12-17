@@ -21,6 +21,8 @@
   --roed: #a82112;
 
   --header: rgb(191, 38, 56);
+  --navbar: purple;
+  --navhover: pink;
 
   /* fonte */
   --overskrift: 'avenir';
@@ -33,7 +35,6 @@
 /* Her bruges en variabel: --blue */
 body {
   font-family: var(--broedtekst);
-  background-color: var(--brun);
   color: var(--white);
 }
 
@@ -48,11 +49,42 @@ h3 {
   margin-bottom: var(--whitespace);
 }
 
+h1 {
+  font-family: var(--overskrift);
+  text-align: center;
+  font-size: 2em;
+  color: black;
+}
+
+h2 {
+  font-family: var(--overskrift);
+  color: black;
+  font-size: 1.8em;
+
+}
+
+h3 {
+  font-family: var(--overskrift);
+  text-align: center;
+  font-size: 1.3em;
+  color: black;
+}
+
+h4 {
+  font-family: var(--overskrift);
+  color: black;
+  font-size: 1.8em;
+  text-align: center;
+
+}
 p {
+  font-family: var(--overskrift);
   margin: var(--whitespace) var(--whitespace);
   padding-bottom: var(--whitespace);
-  font-size: 1.2em;
-  max-width: 35ch; /* undgå lange ulæselige linjer */
+  font-size: 1.5em;
+  /* max-width: 35ch;  */
+  color: black;
+
 }
 
 figcaption {
@@ -152,6 +184,92 @@ nav {
   justify-content: space-between;
 }
 
+
+/* Navigationsbar med submenu */
+
+
+.navbar {
+  overflow: hidden;
+  background-color: var(--navbar);
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+  justify-content: space-between;
+
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: var(--navhover);
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: var(--navhover);
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+
+
+/* billeder */
+
+.undersidebigphoto{
+
+}
+
+.undersidebilleder {
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.variant {
+  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 #overskrift {
   font-family: retiro-std-24pt, sans-serif;
   font-size: 2.4ch;
@@ -211,117 +329,36 @@ img {
 /* MOBILE FIRST (via Flexbox) */
 
 /* 1. Mobile enheder (begynd her) */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 600px) {
 
-  /* Menu */
-
-  /* vis burger */
-  #showMenu {
-    display: block;
-  }
-
-  /* skjul menu og burgermenu */
-  #menu,
-  #burgerMenu {
+  .navbar {
     display: none;
   }
 
-  /*
-  Husk at man skal kunne navigere med fingrene:
-  1. Knapper
-  2. Links
-  3. Stor let læsbar font
-  4. Burgermenu (evt. med CSS animation)
-  */
 }
 
 /* 2. Tablets mv. (fortsæt her) */
-/*
-Research:
-* iPad width > 321px
-*/
-@media only screen and (min-width: 321px) {
 
-  /* Flexbox: design efter skitser */
-  /*
-  Husk, at iPads kan vendes! Lav CSS for både stående og liggende enhed
-  */
-  #wrap {
-    max-width: 700px; /* Holder designet til max 700px */
-    margin:auto;
-  }
-
-  /* Menu */
-  /* vis burger */
-  #showMenu {
-    display: block;
-  }
-
-  /* skjul menu og burgermenu */
-  #menu,
-  #burgerMenu {
+@media only screen and (min-width: 600px) {
+  .dropdown {
     display: none;
   }
 
-  /* --- Flexbox (responsivt flex) --- */
-  main {
-    display: flex;
-    flex-wrap: wrap;
 
-  }
-
-  /* Forklaring:
-  main > * betyder: for alle "børn" af main { ... css her  ...}
-  Se disse tutorials
-
-  @url: https://flexbox-pattern-cheatsheet.kevinpowell.co/
-  @url: https://www.w3schools.com/cssref/css3_pr_flex.asp
-   */
-  main > * {
-    flex: 1 1 32ch;
-  }
-  /*
-  Forkortelsen 'flex' kan sætte flere værdier på en gang.
-  Mere om anvendelsen af flex her:
-  @url: https://developer.mozilla.org/en-US/docs/Web/CSS/flex
-
-  Fx: Three values: flex-grow | flex-shrink | flex-basis
-  flex: 2 2 10%;
-
-  Alternativt bruges box sizing, se
-  @url: https://developer.mozilla.org/en-US/docs/Web/CSS/box-sizing
-  */
 
 }
 
 /* 3. Stor skærm (slut her) */
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 768px) {
   body {
     color: var(--white);
   }
 
-  /* Skjuler burgeren */
-  #showMenu {
+  .dropdown {
     display: none;
   }
 
-  /* Viser menuen */
-  #menu {
-    display: block;
-  }
-  #menu li {
-    display: inline;
-  }
 
-  /* Vises centreret i vinduet */
-  #wrap {
-    max-width: 80%;
-    margin:auto;
-  }
-  /* fuld bredde til øverste section: ; */
-  #aaa {
-    flex:100%;
-  }
 }
 
 @media all and (device-width: 1024px) and (device-height: 768px) and (orientation:landscape) {
