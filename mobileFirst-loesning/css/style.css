@@ -20,14 +20,14 @@
   --groen: #99a812;
   --roed: #a82112;
 
-  --header: rgb(191, 38, 56);
-  --navbar: purple;
-  --navhover: pink;
+  --header: RGB(209, 23, 47);
+  --navbar: #b3813f;
+  --navhover: #aa1327;
 
   /* fonte */
   --overskrift: 'avenir';
   --broedtekst: Helvetica, sans-serif;
-
+  --jolly: 'scheme',sans-serif;
   /* whitespace */
   --whitespace: 2rem;
 }
@@ -50,14 +50,14 @@ h3 {
 }
 
 h1 {
-  font-family: var(--overskrift);
+  font-family: var(--jolly);
   text-align: center;
   font-size: 2em;
   color: black;
 }
 
 h2 {
-  font-family: var(--overskrift);
+  font-family: var(--jolly);
   color: black;
   font-size: 1.8em;
 
@@ -66,25 +66,40 @@ h2 {
 h3 {
   font-family: var(--overskrift);
   text-align: center;
-  font-size: 1.3em;
+  font-size: 1.6em;
+  font-weight: bold;
   color: black;
+  max-width: 90%;
+display: block;
+margin-left: auto;
+margin-right: auto;
 }
 
 h4 {
-  font-family: var(--overskrift);
-  color: black;
+  font-family: var(--jolly);
+  color: red;
   font-size: 1.8em;
   text-align: center;
 
 }
+
 p {
   font-family: var(--overskrift);
   margin: var(--whitespace) var(--whitespace);
   padding-bottom: var(--whitespace);
-  font-size: 1.5em;
+  font-size: 1em;
   /* max-width: 35ch;  */
   color: black;
+  max-width: 90%;
+display: block;
+margin-left: auto;
+margin-right: auto;
+line-height: 1.7;
+}
 
+a {
+  text-decoration: none;
+  color: black;
 }
 
 figcaption {
@@ -191,6 +206,8 @@ nav {
 .navbar {
   overflow: hidden;
   background-color: var(--navbar);
+  display: flex;
+  justify-content: space-between;j
 }
 
 .navbar a {
@@ -216,7 +233,7 @@ nav {
   color: white;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
+  font-family: var(--overskrift);
   margin: 0;
 }
 
@@ -231,6 +248,7 @@ nav {
   background-color: var(--navhover);
   width: 100%;
   z-index: 1;
+
 }
 
 .subnav-content a {
@@ -287,7 +305,7 @@ margin-right: auto;
 
 
 footer {
-  background-color: var(--dark);
+  background-color: var(--header);
   padding: 35px 0;
   text-align: center;
 
@@ -344,7 +362,8 @@ img {
     display: none;
   }
 
-
+  nav {
+    display: block;
 
 }
 
@@ -357,7 +376,10 @@ img {
   .dropdown {
     display: none;
   }
+nav {
+  display: block;
 
+}
 
 }
 
