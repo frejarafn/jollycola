@@ -53,21 +53,21 @@ h3 {
 h1 {
   font-family: var(--jolly);
   text-align: center;
-  font-size: 2em;
+  font-size: 2.5em;
   color: black;
 }
 
 h2 {
   font-family: var(--jolly);
   color: black;
-  font-size: 1.8em;
+  font-size: 2.3em;
 
 }
 
 h3 {
   font-family: var(--overskrift);
   text-align: center;
-  font-size: 1.4em;
+  font-size: 1.9em;
   font-weight: bold;
   color: black;
   max-width: 90%;
@@ -79,7 +79,7 @@ margin-right: auto;
 h4 {
   font-family: var(--jolly);
   color: red;
-  font-size: 1.8em;
+  font-size: 2.3em;
   text-align: center;
 
 }
@@ -88,7 +88,7 @@ p {
   font-family: var(--overskrift);
   margin: var(--whitespace) var(--whitespace);
   padding-bottom: var(--whitespace);
-  font-size: 1em;
+  font-size: 2em;
   /* max-width: 35ch;  */
   color: black;
   max-width: 90%;
@@ -381,6 +381,21 @@ section {
   }
 .indextekst {
   display: none;
+}
+p {
+  font-size: 1em;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.5em;
+}
+h3 {
+  font-size: 1.2em;
+}
+h4 {
+  font-size: 1.5em;
 }
 
 }
