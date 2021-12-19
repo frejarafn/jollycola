@@ -66,7 +66,7 @@ h2 {
 h3 {
   font-family: var(--overskrift);
   text-align: center;
-  font-size: 1.6em;
+  font-size: 1.4em;
   font-weight: bold;
   color: black;
   max-width: 90%;
@@ -197,6 +197,7 @@ nav {
   background-color: var(--header);
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 
@@ -207,15 +208,14 @@ nav {
   overflow: hidden;
   background-color: var(--navbar);
   display: flex;
-  justify-content: space-between;j
+  justify-content: space-between;
 }
 
 .navbar a {
   float: left;
-  font-size: 16px;
+  /* font-size: 16px; */
   color: white;
   text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
 }
 
@@ -227,7 +227,7 @@ nav {
 }
 
 .subnav .subnavbtn {
-  font-size: 16px;
+  font-size: 20px;
   border: none;
   outline: none;
   color: white;
@@ -255,6 +255,9 @@ nav {
   float: left;
   color: white;
   text-decoration: none;
+  font-size: 18px;
+  padding: 14px 16px;
+
 }
 
 .subnav-content a:hover {
@@ -269,9 +272,7 @@ nav {
 
 /* billeder */
 
-.undersidebigphoto{
 
-}
 
 .undersidebilleder {
   max-width: 90%;
@@ -287,6 +288,19 @@ nav {
   margin-right: auto;
 }
 
+.konkuopslag {
+  max-width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+padding-top: 60px;
+
+}
+
+.socials {
+  display: flex;
+  gap: 15px;
+}
 
 #overskrift {
   font-family: retiro-std-24pt, sans-serif;
@@ -308,7 +322,7 @@ footer {
   background-color: var(--header);
   padding: 35px 0;
   text-align: center;
-
+  font-family: var(--jolly);
 }
 
 nav ul,
@@ -352,6 +366,10 @@ img {
   .navbar {
     display: none;
   }
+  .konkuopslag {
+    display: none;
+  }
+
 
 }
 
@@ -367,6 +385,10 @@ img {
 
 }
 
+
+
+}
+
 /* 3. Stor skærm (slut her) */
 @media only screen and (min-width: 768px) {
   body {
@@ -379,6 +401,10 @@ img {
 nav {
   display: block;
 
+}
+
+.forsidebilleder {
+  display: none;
 }
 
 }
